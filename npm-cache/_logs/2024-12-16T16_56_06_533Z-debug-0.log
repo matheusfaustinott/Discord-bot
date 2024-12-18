@@ -1,0 +1,28 @@
+0 verbose cli C:\Program Files\nodejs\node.exe C:\Users\mathe\AppData\Roaming\npm\node_modules\npm\bin\npm-cli.js
+1 info using npm@10.9.2
+2 info using node@v22.11.0
+3 silly config load:file:C:\Users\mathe\AppData\Roaming\npm\node_modules\npm\npmrc
+4 silly config load:file:C:\Users\mathe\OneDrive\Área de Trabalho\discord\.npmrc
+5 silly config load:file:C:\Users\mathe\.npmrc
+6 silly config load:file:C:\Users\mathe\AppData\Roaming\npm\etc\npmrc
+7 verbose title npm init
+8 verbose argv "init" "--yes"
+9 verbose logfile logs-max:10 dir:C:\Users\mathe\OneDrive\Área de Trabalho\discord\npm-cache\_logs\2024-12-16T16_56_06_533Z-
+10 verbose logfile C:\Users\mathe\OneDrive\Área de Trabalho\discord\npm-cache\_logs\2024-12-16T16_56_06_533Z-debug-0.log
+11 silly logfile done cleaning log files
+12 silly package data {
+12 silly package data   name: 'discord',
+12 silly package data   version: '1.0.0',
+12 silly package data   main: 'discord.js',
+12 silly package data   scripts: { test: 'echo "Error: no test specified" && exit 1' },
+12 silly package data   keywords: [],
+12 silly package data   author: '',
+12 silly package data   license: 'ISC',
+12 silly package data   description: ''
+12 silly package data }
+13 verbose cwd C:\Users\mathe\OneDrive\Área de Trabalho\discord
+14 verbose os Windows_NT 10.0.26100
+15 verbose node v22.11.0
+16 verbose npm  v10.9.2
+17 verbose exit 0
+18 info ok

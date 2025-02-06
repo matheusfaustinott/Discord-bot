@@ -7,8 +7,9 @@ const {
   ButtonStyle,
   EmbedBuilder,
 } = require("discord.js");
-const path = require('path'); 
-require('dotenv').config();
+const path = require("path");
+require("dotenv").config();
+const fetch = require("node-fetch");
 
 const bot = new Client({
   intents: [
@@ -21,17 +22,113 @@ const bot = new Client({
 });
 
 const prefixo = "/";
-const token =process.env.DISCORD_TOKEN;
+const token = process.env.DISCORD_TOKEN;
+const checarIntervalo = 2 * 60 * 1000;
+let canalAtualizacoes;
+let canalServidores;
+const verificarServidores = async () => {
+  try {
+    const response = await fetch(process.env.API_OXIGENOTERAPIA);
+    if (response.ok) {
+      const data = await response.json();
+      await canalServidores.send(`🟢 Oxigenoterapia - ${data.message}`);
+    } else {
+      await canalServidores.send("🔴 Oxigenoterapia - Serviço off");
+    }
+  } catch (error) {
+    console.error("Erro ao verificar o servidor:", error);
+    await canalServidores.send("🔴 Oxigenoterapia - Serviço off");
+  }
+};
 
 bot.once("ready", () => {
+  
   console.log(`Bot conectado como ${bot.user.tag}`);
-});
+  const guild = bot.guilds.cache.get('1318225776369467453');
+  if (guild) {
+    canalAtualizacoes = guild.channels.cache.get('1319672059563085906');
+
+    if (canalAtualizacoes) {
+      console.log(`Canal encontrado: ${canalAtualizacoes.name}`);
+      // Enviar uma mensagem no canal
+      canalAtualizacoes.send("Bot configurado e pronto para uso!");
+    } else {
+      console.log("Canal com o ID especificado não encontrado.");
+    }
+  } else {
+    console.log("Guild com o ID especificado não encontrada.");
+  }
+});              
+
+const enviarMensagemFormatada = async (data) => {
+  try {
+    console.log('canalAtualizacoes', canalAtualizacoes);
+    if (!canalAtualizacoes) {
+      console.error("Canal de atualizações não configurado.");
+      return;
+    }
+
+    console.log("Dados recebidos:", data);
+
+    if (data.action === "work_package:updated") {
+      const {
+        _embedded: {
+          project,
+          type,
+          priority,
+          status,
+          author,
+          responsible,
+          assignee,
+          version,
+        },
+        subject,
+        startDate,
+        dueDate,
+      } = data.work_package;
+
+      const embed = new EmbedBuilder()
+        .setColor("#0099ff")
+        .setTitle("STT - ATUALIZAÇÃO")
+        .setDescription(`Atualização no pacote de trabalho: **${subject}**`)
+        .setThumbnail("https://telemedicina.paginas.ufsc.br/files/2023/10/stt.png")
+        .addFields(
+          { name: "Projeto", value: project.name, inline: true },
+          { name: "Tipo", value: type.name, inline: true },
+          { name: "Prioridade", value: priority.name, inline: true },
+          { name: "Status", value: status.name, inline: true },
+          { name: "Autor", value: author.name, inline: true },
+          { name: "Responsável", value: responsible.name, inline: true },
+          { name: "Atribuído para", value: assignee.name, inline: true },
+          { name: "Versão", value: version.name, inline: true },
+          { name: "Início", value: startDate || "Não definido", inline: true },
+          { name: "Término", value: dueDate || "Não definido", inline: true }
+        )
+        .setFooter({
+          text: "STT - Sistema de Telemedicina",
+          iconURL: "https://telemedicina.paginas.ufsc.br/files/2023/10/stt.png",
+        });
+
+      // Envia a mensagem formatada no canal
+      await canalAtualizacoes.send({ embeds: [embed] });
+      console.log("Mensagem enviada com sucesso.");
+    } else {
+      console.warn("Ação não suportada ou inválida.");
+    }
+  } catch (error) {
+    console.error("Erro ao formatar ou enviar mensagem:", error);
+  }
+};
 
 // Evento de entrada no servidor
 bot.on("guildCreate", async (guild) => {
   const canal = guild.channels.cache.find(
     (ch) => ch.name === "geral" && ch.type === 0
   );
+
+  if (!canalAtualizacoes) {
+    console.error("Canal de atualizações não encontrado.");
+  }
 
   if (canal) {
     const embed = new EmbedBuilder()
@@ -106,17 +203,21 @@ bot.on("messageCreate", async (message) => {
     const usuarios = message.mentions.members;
 
     if (!nomeDoAmbiente) {
-      return message.channel.send("Opa! 🤖 Por favor, insira o nome do ambiente.");
+      return message.channel.send(
+        "Opa! 🤖 Por favor, insira o nome do ambiente."
+      );
     }
 
     if (usuarios.size === 0) {
-      return message.channel.send(" Opa! 🤖 Por favor, mencione pelo menos um usuário.");
+      return message.channel.send(
+        " Opa! 🤖 Por favor, mencione pelo menos um usuário."
+      );
     }
 
     try {
       const categoria = await message.guild.channels.create({
         name: nomeDoAmbiente,
-        type: 4, 
+        type: 4,
       });
 
       const chatDev = await message.guild.channels.create({
@@ -168,7 +269,9 @@ bot.on("messageCreate", async (message) => {
         components: [row],
       });
 
-      message.channel.send(`✅ Ambiente "${nomeDoAmbiente}" criado com sucesso!`);
+      message.channel.send(
+        `✅ Ambiente "${nomeDoAmbiente}" criado com sucesso!`
+      );
 
       categoria.permissionOverwrites.create(cargo, {
         ViewChannel: true,
@@ -268,7 +371,6 @@ bot.on("messageCreate", async (message) => {
   }
   if (comando === "Iniciar" && args[0] === "projeto" && args[1] === "STT") {
     try {
-      // Criação da Categoria STT
       const categoriaSTT = await message.guild.channels.create({
         name: "STT",
         type: 4, // Tipo Categoria
@@ -299,13 +401,11 @@ bot.on("messageCreate", async (message) => {
         parent: categoriaSTT.id,
       });
 
-      // Criação da Categoria CODANDO
       const categoriaCODANDO = await message.guild.channels.create({
         name: "CODANDO",
         type: 4, // Tipo 'Categoria'
       });
 
-      // Canal 'duvidas-gerais-STT' com botão interativo
       const canalDuvidasGerais = await message.guild.channels.create({
         name: "duvidas-gerais-STT",
         type: 0,
@@ -324,7 +424,24 @@ bot.on("messageCreate", async (message) => {
         parent: categoriaCODANDO.id,
       });
 
-      // Botão de interação
+      const categoriaServidores = await message.guild.channels.create({
+        name: "SERVIDORES",
+        type: 4,
+      });
+
+      await message.guild.channels.create({
+        name: "servidores",
+        type: 0,
+        parent: categoriaServidores.id,
+      });
+
+      //  verificar status dos servidos da oxi
+      canalServidores = message.guild.channels.cache.find(
+        (ch) => ch.name === "servidores" && ch.type === 0
+      );
+      verificarServidores();
+      setInterval(verificarServidores, checarIntervalo);
+
       const botaoInstalar = new ActionRowBuilder().addComponents(
         new ButtonBuilder()
           .setCustomId("instalar_stt")
@@ -338,7 +455,7 @@ bot.on("messageCreate", async (message) => {
         components: [botaoInstalar],
       });
 
-      // Mensagem de confirmação no canal original
+      // Mensagem de confirmação no canal original geral
       message.channel.send(
         "✅ Estrutura do projeto **STT** criada com sucesso!"
       );
@@ -365,7 +482,8 @@ bot.on("interactionCreate", async (interaction) => {
 
   if (interaction.customId === "criar_task") {
     await interaction.reply({
-      content: "Olá 🤖 Por favor, digite o nome do chat de texto que deseja criar.",
+      content:
+        "Olá 🤖 Por favor, digite o nome do chat de texto que deseja criar.",
       ephemeral: true,
     });
 
@@ -434,7 +552,9 @@ bot.on("interactionCreate", async (interaction) => {
         });
       } catch (err) {
         console.error("Erro ao criar o canal de texto:", err);
-        interaction.channel.send("❌ Ocorreu um erro ao criar o canal de texto.");
+        interaction.channel.send(
+          "❌ Ocorreu um erro ao criar o canal de texto."
+        );
       }
     });
   } else if (interaction.customId === "marcar_reuniao") {
@@ -511,17 +631,18 @@ bot.on("interactionCreate", async (interaction) => {
   }
 
   if (interaction.customId === "instalar_stt") {
-    const pdfPath = path.join(__dirname, 'instalacao_stt.pdf');
+    const pdfPath = path.join(__dirname, "instalacao_stt.pdf");
     await interaction.reply({
       content: "🚀 **Enviando tutorial para seu privado**\nPor favor, aguarde!",
       ephemeral: true,
     });
 
     await interaction.user.send({
-      content: 'Olá 🤖, Segue abaixo o PDF de instalação do STT 📁 :',
+      content: "Olá 🤖, Segue abaixo o PDF de instalação do STT 📁 :",
       files: [pdfPath],
     });
   }
 });
 
 bot.login(token);
+module.exports = { bot, enviarMensagemFormatada };

@@ -1,0 +1,1114 @@
+{
+   "action":"time_entry:created",
+   "time_entry":{
+      "_type":"TimeEntry",
+      "id":181,
+      "ongoing":false,
+      "comment":{
+         "format":"plain",
+         "raw":"",
+         "html":""
+      },
+      "spentOn":"2024-12-19",
+      "hours":"PT5H",
+      "createdAt":"2024-12-19T16:05:16.794Z",
+      "updatedAt":"2024-12-19T16:05:16.794Z",
+      "_embedded":{
+         "project":{
+            "_type":"Project",
+            "id":36,
+            "identifier":"outro-teste",
+            "name":"Outro teste",
+            "active":true,
+            "public":false,
+            "description":{
+               "format":"markdown",
+               "raw":"",
+               "html":""
+            },
+            "createdAt":"2024-12-19T14:40:30.014Z",
+            "updatedAt":"2024-12-19T14:40:30.014Z",
+            "statusExplanation":{
+               "format":"markdown",
+               "raw":"",
+               "html":""
+            },
+            "_links":{
+               "self":{
+                  "href":"/api/v3/projects/36",
+                  "title":"Outro teste"
+               },
+               "createWorkPackage":{
+                  "href":"/api/v3/projects/36/work_packages/form",
+                  "method":"post"
+               },
+               "createWorkPackageImmediately":{
+                  "href":"/api/v3/projects/36/work_packages",
+                  "method":"post"
+               },
+               "workPackages":{
+                  "href":"/api/v3/projects/36/work_packages"
+               },
+               "storages":[
+                  
+               ],
+               "categories":{
+                  "href":"/api/v3/projects/36/categories"
+               },
+               "versions":{
+                  "href":"/api/v3/projects/36/versions"
+               },
+               "memberships":{
+                  "href":"/api/v3/memberships?filters=%5B%7B%22project%22%3A%7B%22operator%22%3A%22%3D%22%2C%22values%22%3A%5B%2236%22%5D%7D%7D%5D"
+               },
+               "types":{
+                  "href":"/api/v3/projects/36/types"
+               },
+               "update":{
+                  "href":"/api/v3/projects/36/form",
+                  "method":"post"
+               },
+               "updateImmediately":{
+                  "href":"/api/v3/projects/36",
+                  "method":"patch"
+               },
+               "delete":{
+                  "href":"/api/v3/projects/36",
+                  "method":"delete"
+               },
+               "schema":{
+                  "href":"/api/v3/projects/schema"
+               },
+               "ancestors":[
+                  
+               ],
+               "projectStorages":{
+                  "href":"/api/v3/project_storages?filters=%5B%7B%22projectId%22%3A%7B%22operator%22%3A%22%3D%22%2C%22values%22%3A%5B%2236%22%5D%7D%7D%5D"
+               },
+               "parent":{
+                  "href":null
+               },
+               "status":{
+                  "href":null
+               }
+            }
+         },
+         "workPackage":{
+            "_type":"WorkPackage",
+            "id":339,
+            "lockVersion":2,
+            "subject":"teste de outro teste",
+            "description":{
+               "format":"markdown",
+               "raw":"",
+               "html":""
+            },
+            "scheduleManually":false,
+            "startDate":null,
+            "dueDate":null,
+            "derivedStartDate":null,
+            "derivedDueDate":null,
+            "estimatedTime":null,
+            "derivedEstimatedTime":null,
+            "derivedRemainingTime":null,
+            "duration":null,
+            "ignoreNonWorkingDays":false,
+            "spentTime":"PT0S",
+            "percentageDone":null,
+            "derivedPercentageDone":null,
+            "createdAt":"2024-12-19T14:50:49.505Z",
+            "updatedAt":"2024-12-19T14:51:59.244Z",
+            "laborCosts":"0,00 R$",
+            "materialCosts":"0,00 R$",
+            "overallCosts":"0,00 R$",
+            "_links":{
+               "attachments":{
+                  "href":"/api/v3/work_packages/339/attachments"
+               },
+               "addAttachment":{
+                  "href":"/api/v3/work_packages/339/attachments",
+                  "method":"post"
+               },
+               "fileLinks":{
+                  "href":"/api/v3/work_packages/339/file_links"
+               },
+               "addFileLink":{
+                  "href":"/api/v3/work_packages/339/file_links",
+                  "method":"post"
+               },
+               "self":{
+                  "href":"/api/v3/work_packages/339",
+                  "title":"teste de outro teste"
+               },
+               "update":{
+                  "href":"/api/v3/work_packages/339/form",
+                  "method":"post"
+               },
+               "schema":{
+                  "href":"/api/v3/work_packages/schemas/36-15"
+               },
+               "updateImmediately":{
+                  "href":"/api/v3/work_packages/339",
+                  "method":"patch"
+               },
+               "delete":{
+                  "href":"/api/v3/work_packages/339",
+                  "method":"delete"
+               },
+               "logTime":{
+                  "href":"/api/v3/time_entries",
+                  "title":"Log time on work package 'teste de outro teste'"
+               },
+               "move":{
+                  "href":"/work_packages/339/move/new",
+                  "type":"text/html",
+                  "title":"Move work package 'teste de outro teste'"
+               },
+               "copy":{
+                  "href":"/work_packages/339/copy",
+                  "type":"text/html",
+                  "title":"Copy work package 'teste de outro teste'"
+               },
+               "pdf":{
+                  "href":"/work_packages/339.pdf",
+                  "type":"application/pdf",
+                  "title":"Export as PDF"
+               },
+               "atom":{
+                  "href":"/work_packages/339.atom",
+                  "type":"application/rss+xml",
+                  "title":"Atom feed"
+               },
+               "availableRelationCandidates":{
+                  "href":"/api/v3/work_packages/339/available_relation_candidates",
+                  "title":"Potential work packages to relate to"
+               },
+               "customFields":{
+                  "href":"/projects/outro-teste/settings/custom_fields",
+                  "type":"text/html",
+                  "title":"Custom fields"
+               },
+               "configureForm":{
+                  "href":"/types/15/edit?tab=form_configuration",
+                  "type":"text/html",
+                  "title":"Configure form"
+               },
+               "activities":{
+                  "href":"/api/v3/work_packages/339/activities"
+               },
+               "availableWatchers":{
+                  "href":"/api/v3/work_packages/339/available_watchers"
+               },
+               "relations":{
+                  "href":"/api/v3/work_packages/339/relations"
+               },
+               "revisions":{
+                  "href":"/api/v3/work_packages/339/revisions"
+               },
+               "watchers":{
+                  "href":"/api/v3/work_packages/339/watchers"
+               },
+               "addWatcher":{
+                  "href":"/api/v3/work_packages/339/watchers",
+                  "method":"post",
+                  "payload":{
+                     "user":{
+                        "href":"/api/v3/users/{user_id}"
+                     }
+                  },
+                  "templated":true
+               },
+               "removeWatcher":{
+                  "href":"/api/v3/work_packages/339/watchers/{user_id}",
+                  "method":"delete",
+                  "templated":true
+               },
+               "addRelation":{
+                  "href":"/api/v3/work_packages/339/relations",
+                  "method":"post",
+                  "title":"Add relation"
+               },
+               "addChild":{
+                  "href":"/api/v3/projects/outro-teste/work_packages",
+                  "method":"post",
+                  "title":"Add child of teste de outro teste"
+               },
+               "changeParent":{
+                  "href":"/api/v3/work_packages/339",
+                  "method":"patch",
+                  "title":"Change parent of teste de outro teste"
+               },
+               "addComment":{
+                  "href":"/api/v3/work_packages/339/activities",
+                  "method":"post",
+                  "title":"Add comment"
+               },
+               "previewMarkup":{
+                  "href":"/api/v3/render/markdown?context=/api/v3/work_packages/339",
+                  "method":"post"
+               },
+               "timeEntries":{
+                  "href":"/api/v3/time_entries?filters=%5B%7B%22work_package_id%22%3A%7B%22operator%22%3A%22%3D%22%2C%22values%22%3A%5B%22339%22%5D%7D%7D%5D",
+                  "title":"Time entries"
+               },
+               "ancestors":[
+                  
+               ],
+               "category":{
+                  "href":null
+               },
+               "type":{
+                  "href":"/api/v3/types/15",
+                  "title":"Task"
+               },
+               "priority":{
+                  "href":"/api/v3/priorities/34",
+                  "title":"Normal"
+               },
+               "project":{
+                  "href":"/api/v3/projects/36",
+                  "title":"Outro teste"
+               },
+               "status":{
+                  "href":"/api/v3/statuses/35",
+                  "title":"In progress"
+               },
+               "author":{
+                  "href":"/api/v3/users/9",
+                  "title":"Jean Fernando Hillesheim"
+               },
+               "responsible":{
+                  "href":null
+               },
+               "assignee":{
+                  "href":null
+               },
+               "version":{
+                  "href":null
+               },
+               "parent":{
+                  "href":null,
+                  "title":null
+               },
+               "customActions":[
+                  
+               ],
+               "logCosts":{
+                  "href":"/work_packages/339/cost_entries/new",
+                  "type":"text/html",
+                  "title":"Log costs on teste de outro teste"
+               },
+               "showCosts":{
+                  "href":"/projects/36/cost_reports?fields%5B%5D=WorkPackageId&operators%5BWorkPackageId%5D=%3D&set_filter=1&values%5BWorkPackageId%5D=339",
+                  "type":"text/html",
+                  "title":"Show cost entries"
+               },
+               "costsByType":{
+                  "href":"/api/v3/work_packages/339/summarized_costs_by_type"
+               },
+               "meetings":{
+                  "href":"/work_packages/339/tabs/meetings",
+                  "title":"meetings"
+               },
+               "github":{
+                  "href":"/work_packages/339/tabs/github",
+                  "title":"github"
+               },
+               "github_pull_requests":{
+                  "href":"/api/v3/work_packages/339/github_pull_requests",
+                  "title":"GitHub pull requests"
+               },
+               "gitlab":{
+                  "href":"/work_packages/339/tabs/gitlab",
+                  "title":"gitlab"
+               },
+               "gitlab_merge_requests":{
+                  "href":"/api/v3/work_packages/339/gitlab_merge_requests",
+                  "title":"Gitlab merge requests"
+               },
+               "gitlab_issues":{
+                  "href":"/api/v3/work_packages/339/gitlab_issues",
+                  "title":"Gitlab Issues"
+               },
+               "convertBCF":{
+                  "href":"/api/bcf/2.1/projects/outro-teste/topics",
+                  "title":"Convert to BCF",
+                  "payload":{
+                     "reference_links":[
+                        "/api/v3/work_packages/339"
+                     ]
+                  },
+                  "method":"post"
+               },
+               "customField3":[
+                  {
+                     "title":"Backend",
+                     "href":"/api/v3/custom_options/6"
+                  },
+                  {
+                     "title":"Frontend",
+                     "href":"/api/v3/custom_options/7"
+                  }
+               ]
+            }
+         },
+         "user":{
+            "_type":"User",
+            "id":9,
+            "name":"Jean Fernando Hillesheim",
+            "createdAt":"2024-10-29T22:37:14.019Z",
+            "updatedAt":"2024-12-06T18:34:06.667Z",
+            "login":"jeanhillesheim@gmail.com",
+            "admin":true,
+            "firstName":"Jean Fernando",
+            "lastName":"Hillesheim",
+            "email":"jeanhillesheim@gmail.com",
+            "avatar":"https://secure.gravatar.com/avatar/1a856c51b9f60479da47d7c6b7357471?default=404&secure=true",
+            "status":"active",
+            "identityUrl":null,
+            "language":"pt-BR",
+            "_links":{
+               "self":{
+                  "href":"/api/v3/users/9",
+                  "title":"Jean Fernando Hillesheim"
+               },
+               "memberships":{
+                  "href":"/api/v3/memberships?filters=%5B%7B%22principal%22%3A%7B%22operator%22%3A%22%3D%22%2C%22values%22%3A%5B%229%22%5D%7D%7D%5D",
+                  "title":"Associações"
+               },
+               "showUser":{
+                  "href":"/users/9",
+                  "type":"text/html"
+               },
+               "updateImmediately":{
+                  "href":"/api/v3/users/9",
+                  "title":"Update jeanhillesheim@gmail.com",
+                  "method":"patch"
+               },
+               "lock":{
+                  "href":"/api/v3/users/9/lock",
+                  "title":"Set lock on jeanhillesheim@gmail.com",
+                  "method":"post"
+               },
+               "delete":{
+                  "href":"/api/v3/users/9",
+                  "title":"Delete jeanhillesheim@gmail.com",
+                  "method":"delete"
+               }
+            }
+         },
+         "activity":{
+            "_type":"TimeEntriesActivity",
+            "id":29,
+            "name":"Desenvolvimento",
+            "position":1,
+            "default":true,
+            "_links":{
+               "self":{
+                  "href":"/api/v3/time_entries/activities/29",
+                  "title":"Desenvolvimento"
+               },
+               "projects":[
+                  
+               ]
+            }
+         }
+      },
+      "_links":{
+         "self":{
+            "href":"/api/v3/time_entries/181"
+         },
+         "updateImmediately":{
+            "href":"/api/v3/time_entries/181",
+            "method":"patch"
+         },
+         "update":{
+            "href":"/api/v3/time_entries/181/form",
+            "method":"post"
+         },
+         "delete":{
+            "href":"/api/v3/time_entries/181",
+            "method":"delete"
+         },
+         "schema":{
+            "href":"/api/v3/time_entries/schema"
+         },
+         "project":{
+            "href":"/api/v3/projects/36",
+            "title":"Outro teste"
+         },
+         "workPackage":{
+            "href":"/api/v3/work_packages/339",
+            "title":"teste de outro teste"
+         },
+         "user":{
+            "href":"/api/v3/users/9",
+            "title":"Jean Fernando Hillesheim"
+         },
+         "activity":{
+            "href":"/api/v3/time_entries/activities/29",
+            "title":"Desenvolvimento"
+         }
+      }
+   }
+}
+
+
+
+
+
+
+
+
+
+
+/// dados 2 
+
+
+{
+   "action":"work_package:updated",
+   "work_package":{
+      "_type":"WorkPackage",
+      "id":338,
+      "lockVersion":16,
+      "subject":"Melhorias na inserção e alteração de rascunhos",
+      "description":{
+         "format":"markdown",
+         "raw":"*   No item &quot;Paciente internado&quot;, a instituição não está sendo recuperada na alteração;\n    \n*   No mesmo item do ponto anterior, deslocar a caixa de escolha da instituição para a esquerda;\n    \n*   O anexo da gasometria não está com a opção &quot;Visualizar&quot; na alteração;\n    \n*   Não consigo visualizar nenhum anexo pelo botão &quot;Visualizar&quot; na seção &quot;Resultados&quot;;\n    \n*   Deve haver um modal &quot;Carregando&quot; ao realizar a requisição de salvar rascunho;\n    \n*   O &quot;flick&quot; da tela ao editar um processo está bem estranho.\n    \n*   O &quot;Parecer da situação&quot; deveria ficar desabilitado até que o usuário preenchesse a caixa de seleção abaixo;\n    \n*   Remover por enquanto o botão de &quot;Salvar&quot; da edição do processo;\n    \n\n<br>",
+         "html":"<ul class=\"op-uc-list\">\n<li class=\"op-uc-list--item\">\n<p class=\"op-uc-p\">No item \"Paciente internado\", a instituição não está sendo recuperada na alteração;</p>\n</li>\n<li class=\"op-uc-list--item\">\n<p class=\"op-uc-p\">No mesmo item do ponto anterior, deslocar a caixa de escolha da instituição para a esquerda;</p>\n</li>\n<li class=\"op-uc-list--item\">\n<p class=\"op-uc-p\">O anexo da gasometria não está com a opção \"Visualizar\" na alteração;</p>\n</li>\n<li class=\"op-uc-list--item\">\n<p class=\"op-uc-p\">Não consigo visualizar nenhum anexo pelo botão \"Visualizar\" na seção \"Resultados\";</p>\n</li>\n<li class=\"op-uc-list--item\">\n<p class=\"op-uc-p\">Deve haver um modal \"Carregando\" ao realizar a requisição de salvar rascunho;</p>\n</li>\n<li class=\"op-uc-list--item\">\n<p class=\"op-uc-p\">O \"flick\" da tela ao editar um processo está bem estranho.</p>\n</li>\n<li class=\"op-uc-list--item\">\n<p class=\"op-uc-p\">O \"Parecer da situação\" deveria ficar desabilitado até que o usuário preenchesse a caixa de seleção abaixo;</p>\n</li>\n<li class=\"op-uc-list--item\">\n<p class=\"op-uc-p\">Remover por enquanto o botão de \"Salvar\" da edição do processo;</p>\n</li>\n</ul>\n<br>"
+      },
+      "scheduleManually":false,
+      "startDate":"2024-12-19",
+      "dueDate":"2025-01-13",
+      "derivedStartDate":null,
+      "derivedDueDate":null,
+      "estimatedTime":"P1DT6H",
+      "derivedEstimatedTime":null,
+      "remainingTime":"P1DT6H",
+      "derivedRemainingTime":null,
+      "duration":"P18D",
+      "ignoreNonWorkingDays":false,
+      "spentTime":"PT0S",
+      "percentageDone":0,
+      "derivedPercentageDone":null,
+      "createdAt":"2024-12-18T20:24:14.140Z",
+      "updatedAt":"2024-12-19T16:27:21.374Z",
+      "laborCosts":"0,00 R$",
+      "materialCosts":"0,00 R$",
+      "overallCosts":"0,00 R$",
+      "_embedded":{
+         "attachments":{
+            "_type":"Collection",
+            "total":0,
+            "count":0,
+            "_embedded":{
+               "elements":[
+                  
+               ]
+            },
+            "_links":{
+               "self":{
+                  "href":"/api/v3/work_packages/338/attachments"
+               }
+            }
+         },
+         "fileLinks":{
+            "_type":"Collection",
+            "total":0,
+            "count":0,
+            "_embedded":{
+               "elements":[
+                  
+               ]
+            },
+            "_links":{
+               "self":{
+                  "href":"/api/v3/work_packages/338/file_links"
+               }
+            }
+         },
+         "relations":{
+            "_type":"Collection",
+            "total":0,
+            "count":0,
+            "_embedded":{
+               "elements":[
+                  
+               ]
+            },
+            "_links":{
+               "self":{
+                  "href":"/api/v3/work_packages/338/relations"
+               }
+            }
+         },
+         "type":{
+            "_type":"Type",
+            "id":15,
+            "name":"Task",
+            "color":"#1A67A3",
+            "position":1,
+            "isDefault":true,
+            "isMilestone":false,
+            "createdAt":"2024-10-29T20:16:15.867Z",
+            "updatedAt":"2024-11-01T17:26:32.871Z",
+            "_links":{
+               "self":{
+                  "href":"/api/v3/types/15",
+                  "title":"Task"
+               }
+            }
+         },
+         "priority":{
+            "_type":"Priority",
+            "id":35,
+            "name":"Alta",
+            "position":3,
+            "color":"#F59F00",
+            "isDefault":false,
+            "isActive":true,
+            "_links":{
+               "self":{
+                  "href":"/api/v3/priorities/35",
+                  "title":"Alta"
+               }
+            }
+         },
+         "project":{
+            "_type":"Project",
+            "id":9,
+            "identifier":"oxigenoterapia",
+            "name":"Oxigenoterapia",
+            "active":true,
+            "public":false,
+            "description":{
+               "format":"markdown",
+               "raw":"",
+               "html":""
+            },
+            "createdAt":"2024-10-30T20:09:10.422Z",
+            "updatedAt":"2024-12-03T11:48:48.139Z",
+            "statusExplanation":{
+               "format":"markdown",
+               "raw":"",
+               "html":""
+            },
+            "_links":{
+               "self":{
+                  "href":"/api/v3/projects/9",
+                  "title":"Oxigenoterapia"
+               },
+               "createWorkPackage":{
+                  "href":"/api/v3/projects/9/work_packages/form",
+                  "method":"post"
+               },
+               "createWorkPackageImmediately":{
+                  "href":"/api/v3/projects/9/work_packages",
+                  "method":"post"
+               },
+               "workPackages":{
+                  "href":"/api/v3/projects/9/work_packages"
+               },
+               "storages":[
+                  
+               ],
+               "categories":{
+                  "href":"/api/v3/projects/9/categories"
+               },
+               "versions":{
+                  "href":"/api/v3/projects/9/versions"
+               },
+               "memberships":{
+                  "href":"/api/v3/memberships?filters=%5B%7B%22project%22%3A%7B%22operator%22%3A%22%3D%22%2C%22values%22%3A%5B%229%22%5D%7D%7D%5D"
+               },
+               "types":{
+                  "href":"/api/v3/projects/9/types"
+               },
+               "update":{
+                  "href":"/api/v3/projects/9/form",
+                  "method":"post"
+               },
+               "updateImmediately":{
+                  "href":"/api/v3/projects/9",
+                  "method":"patch"
+               },
+               "delete":{
+                  "href":"/api/v3/projects/9",
+                  "method":"delete"
+               },
+               "schema":{
+                  "href":"/api/v3/projects/schema"
+               },
+               "ancestors":[
+                  {
+                     "href":"/api/v3/projects/24",
+                     "title":"LabTelemed"
+                  },
+                  {
+                     "href":"/api/v3/projects/8",
+                     "title":"STT"
+                  }
+               ],
+               "projectStorages":{
+                  "href":"/api/v3/project_storages?filters=%5B%7B%22projectId%22%3A%7B%22operator%22%3A%22%3D%22%2C%22values%22%3A%5B%229%22%5D%7D%7D%5D"
+               },
+               "parent":{
+                  "href":"/api/v3/projects/8",
+                  "title":"STT"
+               },
+               "status":{
+                  "href":null
+               }
+            }
+         },
+         "status":{
+            "_type":"Status",
+            "id":35,
+            "name":"In progress",
+            "isClosed":false,
+            "color":"#CC5DE8",
+            "isDefault":false,
+            "isReadonly":false,
+            "excludedFromTotals":false,
+            "defaultDoneRatio":40,
+            "position":7,
+            "_links":{
+               "self":{
+                  "href":"/api/v3/statuses/35",
+                  "title":"In progress"
+               }
+            }
+         },
+         "author":{
+            "_type":"User",
+            "id":10,
+            "name":"Eduardo Beckhauser",
+            "createdAt":"2024-10-30T20:05:05.744Z",
+            "updatedAt":"2024-12-19T11:55:40.005Z",
+            "login":"edubeckha@gmail.com",
+            "admin":true,
+            "firstName":"Eduardo",
+            "lastName":"Beckhauser",
+            "email":"edubeckha@gmail.com",
+            "avatar":"https://secure.gravatar.com/avatar/e2ade948aed1289f4872b764908c20e3?default=404&secure=true",
+            "status":"active",
+            "identityUrl":null,
+            "language":"pt-BR",
+            "_links":{
+               "self":{
+                  "href":"/api/v3/users/10",
+                  "title":"Eduardo Beckhauser"
+               },
+               "memberships":{
+                  "href":"/api/v3/memberships?filters=%5B%7B%22principal%22%3A%7B%22operator%22%3A%22%3D%22%2C%22values%22%3A%5B%2210%22%5D%7D%7D%5D",
+                  "title":"Associações"
+               },
+               "showUser":{
+                  "href":"/users/10",
+                  "type":"text/html"
+               },
+               "updateImmediately":{
+                  "href":"/api/v3/users/10",
+                  "title":"Update edubeckha@gmail.com",
+                  "method":"patch"
+               },
+               "lock":{
+                  "href":"/api/v3/users/10/lock",
+                  "title":"Set lock on edubeckha@gmail.com",
+                  "method":"post"
+               },
+               "delete":{
+                  "href":"/api/v3/users/10",
+                  "title":"Delete edubeckha@gmail.com",
+                  "method":"delete"
+               }
+            }
+         },
+         "responsible":{
+            "_type":"User",
+            "id":10,
+            "name":"Eduardo Beckhauser",
+            "createdAt":"2024-10-30T20:05:05.744Z",
+            "updatedAt":"2024-12-19T11:55:40.005Z",
+            "login":"edubeckha@gmail.com",
+            "admin":true,
+            "firstName":"Eduardo",
+            "lastName":"Beckhauser",
+            "email":"edubeckha@gmail.com",
+            "avatar":"https://secure.gravatar.com/avatar/e2ade948aed1289f4872b764908c20e3?default=404&secure=true",
+            "status":"active",
+            "identityUrl":null,
+            "language":"pt-BR",
+            "_links":{
+               "self":{
+                  "href":"/api/v3/users/10",
+                  "title":"Eduardo Beckhauser"
+               },
+               "memberships":{
+                  "href":"/api/v3/memberships?filters=%5B%7B%22principal%22%3A%7B%22operator%22%3A%22%3D%22%2C%22values%22%3A%5B%2210%22%5D%7D%7D%5D",
+                  "title":"Associações"
+               },
+               "showUser":{
+                  "href":"/users/10",
+                  "type":"text/html"
+               },
+               "updateImmediately":{
+                  "href":"/api/v3/users/10",
+                  "title":"Update edubeckha@gmail.com",
+                  "method":"patch"
+               },
+               "lock":{
+                  "href":"/api/v3/users/10/lock",
+                  "title":"Set lock on edubeckha@gmail.com",
+                  "method":"post"
+               },
+               "delete":{
+                  "href":"/api/v3/users/10",
+                  "title":"Delete edubeckha@gmail.com",
+                  "method":"delete"
+               }
+            }
+         },
+         "assignee":{
+            "_type":"User",
+            "id":22,
+            "name":"Matheus Faustino",
+            "createdAt":"2024-10-31T21:09:54.316Z",
+            "updatedAt":"2024-12-19T11:00:29.287Z",
+            "login":"MatheusFaustino",
+            "admin":false,
+            "firstName":"Matheus",
+            "lastName":"Faustino",
+            "email":"matheusfaustinott@gmail.com",
+            "avatar":"https://secure.gravatar.com/avatar/7f173a910b84f7775fddeaeb93d2b0cd?default=404&secure=true",
+            "status":"active",
+            "identityUrl":null,
+            "language":"pt-BR",
+            "_links":{
+               "self":{
+                  "href":"/api/v3/users/22",
+                  "title":"Matheus Faustino"
+               },
+               "memberships":{
+                  "href":"/api/v3/memberships?filters=%5B%7B%22principal%22%3A%7B%22operator%22%3A%22%3D%22%2C%22values%22%3A%5B%2222%22%5D%7D%7D%5D",
+                  "title":"Associações"
+               },
+               "showUser":{
+                  "href":"/users/22",
+                  "type":"text/html"
+               },
+               "updateImmediately":{
+                  "href":"/api/v3/users/22",
+                  "title":"Update MatheusFaustino",
+                  "method":"patch"
+               },
+               "lock":{
+                  "href":"/api/v3/users/22/lock",
+                  "title":"Set lock on MatheusFaustino",
+                  "method":"post"
+               },
+               "delete":{
+                  "href":"/api/v3/users/22",
+                  "title":"Delete MatheusFaustino",
+                  "method":"delete"
+               }
+            }
+         },
+         "version":{
+            "_type":"Version",
+            "id":26,
+            "name":"2.34.4",
+            "description":{
+               "format":"plain",
+               "raw":"",
+               "html":""
+            },
+            "startDate":"2024-12-19",
+            "endDate":"2025-01-14",
+            "status":"open",
+            "sharing":"descendants",
+            "createdAt":"2024-12-19T12:30:19.282Z",
+            "updatedAt":"2024-12-19T12:30:19.282Z",
+            "_links":{
+               "self":{
+                  "href":"/api/v3/versions/26",
+                  "title":"2.34.4"
+               },
+               "schema":{
+                  "href":"/api/v3/versions/schema"
+               },
+               "update":{
+                  "href":"/api/v3/versions/26/form",
+                  "method":"post"
+               },
+               "updateImmediately":{
+                  "href":"/api/v3/versions/26",
+                  "method":"patch"
+               },
+               "delete":{
+                  "href":"/api/v3/versions/26",
+                  "method":"delete"
+               },
+               "definingProject":{
+                  "href":"/api/v3/projects/8",
+                  "title":"STT"
+               },
+               "availableInProjects":{
+                  "href":"/api/v3/versions/26/projects"
+               }
+            }
+         },
+         "customActions":[
+            
+         ],
+         "costsByType":{
+            "_type":"Collection",
+            "total":0,
+            "count":0,
+            "_embedded":{
+               "elements":[
+                  
+               ]
+            },
+            "_links":{
+               "self":{
+                  "href":"/api/v3/work_packages/338/summarized_costs_by_type"
+               }
+            }
+         }
+      },
+      "_links":{
+         "attachments":{
+            "href":"/api/v3/work_packages/338/attachments"
+         },
+         "addAttachment":{
+            "href":"/api/v3/work_packages/338/attachments",
+            "method":"post"
+         },
+         "fileLinks":{
+            "href":"/api/v3/work_packages/338/file_links"
+         },
+         "addFileLink":{
+            "href":"/api/v3/work_packages/338/file_links",
+            "method":"post"
+         },
+         "self":{
+            "href":"/api/v3/work_packages/338",
+            "title":"Melhorias na inserção e alteração de rascunhos"
+         },
+         "update":{
+            "href":"/api/v3/work_packages/338/form",
+            "method":"post"
+         },
+         "schema":{
+            "href":"/api/v3/work_packages/schemas/9-15"
+         },
+         "updateImmediately":{
+            "href":"/api/v3/work_packages/338",
+            "method":"patch"
+         },
+         "delete":{
+            "href":"/api/v3/work_packages/338",
+            "method":"delete"
+         },
+         "logTime":{
+            "href":"/api/v3/time_entries",
+            "title":"Log time on work package 'Melhorias na inserção e alteração de rascunhos'"
+         },
+         "move":{
+            "href":"/work_packages/338/move/new",
+            "type":"text/html",
+            "title":"Move work package 'Melhorias na inserção e alteração de rascunhos'"
+         },
+         "copy":{
+            "href":"/work_packages/338/copy",
+            "type":"text/html",
+            "title":"Copy work package 'Melhorias na inserção e alteração de rascunhos'"
+         },
+         "pdf":{
+            "href":"/work_packages/338.pdf",
+            "type":"application/pdf",
+            "title":"Export as PDF"
+         },
+         "atom":{
+            "href":"/work_packages/338.atom",
+            "type":"application/rss+xml",
+            "title":"Atom feed"
+         },
+         "availableRelationCandidates":{
+            "href":"/api/v3/work_packages/338/available_relation_candidates",
+            "title":"Potential work packages to relate to"
+         },
+         "customFields":{
+            "href":"/projects/oxigenoterapia/settings/custom_fields",
+            "type":"text/html",
+            "title":"Custom fields"
+         },
+         "configureForm":{
+            "href":"/types/15/edit?tab=form_configuration",
+            "type":"text/html",
+            "title":"Configure form"
+         },
+         "activities":{
+            "href":"/api/v3/work_packages/338/activities"
+         },
+         "availableWatchers":{
+            "href":"/api/v3/work_packages/338/available_watchers"
+         },
+         "relations":{
+            "href":"/api/v3/work_packages/338/relations"
+         },
+         "revisions":{
+            "href":"/api/v3/work_packages/338/revisions"
+         },
+         "watchers":{
+            "href":"/api/v3/work_packages/338/watchers"
+         },
+         "addWatcher":{
+            "href":"/api/v3/work_packages/338/watchers",
+            "method":"post",
+            "payload":{
+               "user":{
+                  "href":"/api/v3/users/{user_id}"
+               }
+            },
+            "templated":true
+         },
+         "removeWatcher":{
+            "href":"/api/v3/work_packages/338/watchers/{user_id}",
+            "method":"delete",
+            "templated":true
+         },
+         "addRelation":{
+            "href":"/api/v3/work_packages/338/relations",
+            "method":"post",
+            "title":"Add relation"
+         },
+         "addChild":{
+            "href":"/api/v3/projects/oxigenoterapia/work_packages",
+            "method":"post",
+            "title":"Add child of Melhorias na inserção e alteração de rascunhos"
+         },
+         "changeParent":{
+            "href":"/api/v3/work_packages/338",
+            "method":"patch",
+            "title":"Change parent of Melhorias na inserção e alteração de rascunhos"
+         },
+         "addComment":{
+            "href":"/api/v3/work_packages/338/activities",
+            "method":"post",
+            "title":"Add comment"
+         },
+         "previewMarkup":{
+            "href":"/api/v3/render/markdown?context=/api/v3/work_packages/338",
+            "method":"post"
+         },
+         "timeEntries":{
+            "href":"/api/v3/time_entries?filters=%5B%7B%22work_package_id%22%3A%7B%22operator%22%3A%22%3D%22%2C%22values%22%3A%5B%22338%22%5D%7D%7D%5D",
+            "title":"Time entries"
+         },
+         "ancestors":[
+            
+         ],
+         "category":{
+            "href":null
+         },
+         "type":{
+            "href":"/api/v3/types/15",
+            "title":"Task"
+         },
+         "priority":{
+            "href":"/api/v3/priorities/35",
+            "title":"Alta"
+         },
+         "project":{
+            "href":"/api/v3/projects/9",
+            "title":"Oxigenoterapia"
+         },
+         "status":{
+            "href":"/api/v3/statuses/35",
+            "title":"In progress"
+         },
+         "author":{
+            "href":"/api/v3/users/10",
+            "title":"Eduardo Beckhauser"
+         },
+         "responsible":{
+            "href":"/api/v3/users/10",
+            "title":"Eduardo Beckhauser"
+         },
+         "assignee":{
+            "href":"/api/v3/users/22",
+            "title":"Matheus Faustino"
+         },
+         "version":{
+            "href":"/api/v3/versions/26",
+            "title":"2.34.4"
+         },
+         "parent":{
+            "href":null,
+            "title":null
+         },
+         "customActions":[
+            
+         ],
+         "logCosts":{
+            "href":"/work_packages/338/cost_entries/new",
+            "type":"text/html",
+            "title":"Log costs on Melhorias na inserção e alteração de rascunhos"
+         },
+         "showCosts":{
+            "href":"/projects/9/cost_reports?fields%5B%5D=WorkPackageId&operators%5BWorkPackageId%5D=%3D&set_filter=1&values%5BWorkPackageId%5D=338",
+            "type":"text/html",
+            "title":"Show cost entries"
+         },
+         "costsByType":{
+            "href":"/api/v3/work_packages/338/summarized_costs_by_type"
+         },
+         "meetings":{
+            "href":"/work_packages/338/tabs/meetings",
+            "title":"meetings"
+         },
+         "github":{
+            "href":"/work_packages/338/tabs/github",
+            "title":"github"
+         },
+         "github_pull_requests":{
+            "href":"/api/v3/work_packages/338/github_pull_requests",
+            "title":"GitHub pull requests"
+         },
+         "gitlab":{
+            "href":"/work_packages/338/tabs/gitlab",
+            "title":"gitlab"
+         },
+         "gitlab_merge_requests":{
+            "href":"/api/v3/work_packages/338/gitlab_merge_requests",
+            "title":"Gitlab merge requests"
+         },
+         "gitlab_issues":{
+            "href":"/api/v3/work_packages/338/gitlab_issues",
+            "title":"Gitlab Issues"
+         },
+         "convertBCF":{
+            "href":"/api/bcf/2.1/projects/oxigenoterapia/topics",
+            "title":"Convert to BCF",
+            "payload":{
+               "reference_links":[
+                  "/api/v3/work_packages/338"
+               ]
+            },
+            "method":"post"
+         },
+         "customField3":[
+            {
+               "title":"Backend",
+               "href":"/api/v3/custom_options/6"
+            },
+            {
+               "title":"Frontend",
+               "href":"/api/v3/custom_options/7"
+            }
+         ]
+      }
+   }
+}

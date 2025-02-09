@@ -1,3 +1,5 @@
+import { PermissionsBitField } from "discord.js";
+
 async function criarEvento(bot, comando, args, message){
     
     const nomeDoEvento = args[1]; // Nome do evento cada [argumento recebe o que você insere]

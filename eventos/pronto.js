@@ -1,5 +1,4 @@
 function eventoProntidao(bot) {
-    console.log("To chegando aqui")
     bot.once("ready", () => {
         console.log(`Bot conectado como ${bot.user.tag}`);
 

@@ -9,7 +9,7 @@ function receberMensagem(bot){
             const mensagemUsuario = message.content.toLowerCase().split(' ');
             const args = mensagemUsuario.slice(1);
             const comando = mensagemUsuario[0]
-            rotasMensagens(bot, comando,args, message)
+            rotasMensagens(bot, comando, args, message)
         }
     })
 }

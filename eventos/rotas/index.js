@@ -19,7 +19,6 @@ function rotasMensagens(bot, comando, args=null, message){
     }
 
     if (comando === "/iniciar" && args[0] === "projeto" && args[1] === "stt"){
-        console.log("To entrandoa qui")
         iniciarProjeto(bot, comando, args, message)
     }
 
